@@ -1,0 +1,13 @@
+
+body{
+    margin: 0px;
+    background-color: red;
+}
+
+header{
+    margin: 0px;
+    background-color: pink;
+    width: 100vw;
+    height: 10vh;
+}
+
