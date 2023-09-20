@@ -7,6 +7,7 @@ const { pathToFileURL } = require('url');
 
 app.use('router', router);
 app.use(express.static("../FRONTEND")); 
+app.use(express.static('/FRONTEND/style.css'))
 app.use(express.urlencoded({extended : true}));
 
 const PORT = 3000;
