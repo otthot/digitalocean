@@ -2,18 +2,17 @@ const express = require('express');
 const app = express();
 const path = require("path");
 
-const router = require("./router/router");
-const { pathToFileURL } = require('url');
+const router = require("./router/router.js");
 
-app.use('router', router);
-app.use(express.static("../FRONTEND")); 
-app.use(express.static('/FRONTEND/style.css'))
+app.use(express.static("/public")); 
 app.use(express.urlencoded({extended : true}));
 
 const PORT = 3000;
 const HOST = '127.0.0.1'
 
-const filePath = path.join(__dirname, 'FRONTEND', 'index.html')
+const filePath = path.join(__dirname, 'public', 'index.html')
+
+app.use('/router', router);
 
 app.get("/", (req, res) => {
 
@@ -21,13 +20,11 @@ app.get("/", (req, res) => {
 
 })
 
-
 app.get('/static', (req, res) => {
 
     res.sendFile(filePath)
     
 })
-
 
 app.get("/new", (req, res) => {
 
