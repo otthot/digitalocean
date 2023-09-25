@@ -4,25 +4,24 @@ const path = require("path");
 
 const router = require("./router/router.js");
 
-app.use(express.static("/public")); 
-app.use(express.urlencoded({extended : true}));
-
 const PORT = 3000;
 const HOST = '127.0.0.1'
 
-const filePath = path.join(__dirname, 'public', 'index.html')
+const homepage = path.join(__dirname, 'public', 'index.html')
 
 app.use('/router', router);
+app.use(express.urlencoded({extended : true}));
+app.use(express.static('public')); 
 
 app.get("/", (req, res) => {
 
-    res.send("Hello World")
+    res.sendFile(homepage)
 
 })
 
 app.get('/static', (req, res) => {
 
-    res.sendFile(filePath)
+    res.send({id : 1, data : {name : "Otto", age : 23, city : "New York", country : "USA"}})
     
 })
 

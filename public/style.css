@@ -1,13 +1,63 @@
 
 body{
     margin: 0px;
-    background-color: red;
+    background-color: #edbbbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#joe-logo{
+    border-radius: 50%;
+    height: 90%;   
+    position: relative;
+    left: 10px;
 }
 
 header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 0px;
-    background-color: pink;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 10vh;
+    margin-bottom: 10px;
 }
 
+#menu{
+    width: 40%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menu a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+#menu a:hover{
+    text-decoration: underline pink 2px;
+}
+
+#title-div{
+    width:  50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+#canvas{
+    width: 50vw;
+    height: 80vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
