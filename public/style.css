@@ -38,8 +38,12 @@ header{
     margin: 50px;
 }
 
+#article h3{
+    text-decoration: underline pink 3px;
+}
+
 #menu{
-    width: 30%;
+    width: 50%;
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -48,6 +52,7 @@ header{
 #menu a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 #menu a:hover{
